@@ -1,0 +1,17 @@
+#bodyDiv {
+    background-color: whitesmoke;
+    width: 820px;
+    height: 700px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#divInput {
+    text-align-last: center;
+}
+
+#divOutput {
+    text-align-last: center;
+}

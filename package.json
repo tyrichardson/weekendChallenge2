@@ -1,0 +1,24 @@
+{
+  "name": "weekendChallenge2",
+  "version": "1.0.0",
+  "description": "Create a calculator for data entered on the client page, sent to the server for calculations, returned and displayed on the DOM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyrichardson/weekendChallenge2.git"
+  },
+  "keywords": [],
+  "author": "Ty Richardson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyrichardson/weekendChallenge2/issues"
+  },
+  "homepage": "https://github.com/tyrichardson/weekendChallenge2#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
