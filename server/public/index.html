@@ -27,14 +27,38 @@
             <button type="submit" id="multiplyButton">Multiplication</button>
             <button type="submit" id="divideButton">Division</button>
 
-
-
-         </div>
+         </div><!--end of divInput -->
 
             <br>
             <br>
+
+        <div id="divCurrentOut">
+          
+          <h2>Current Problem</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Value</th>
+                        <th>Operator</th>
+                        <th>Second Value</th>
+                        <th>=</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="outputCurrentToDom"></tbody>
+            </table>
+        </div><!-- end of divOutput -->
+
+        <br>
+        <br>
 
         <div id="divOutput">
+        
+        <br>
+        <br>
+
+            <h3>Problem History</h3>
+
             <table>
                 <thead>
                     <tr>
@@ -48,8 +72,9 @@
                 <tbody id="outputToDom"></tbody>
             </table>
         </div>
+        <!-- end of divOutput -->
         
-    </div>
+    </div><!-- end of bodyDiv-->
 
 </body>
 </html>

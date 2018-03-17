@@ -21,20 +21,28 @@ app.post('/problemsObject',(req, res) => {
     let problemToAdd = req.body;
     mathProblems.push(problemToAdd);
     console.log('mathProblems array:', mathProblems);
-    res.sendStatus(200);
-    calculate();
-});
-
-function calculate(){
-    console.log('calculate function entered');
+    console.log('calculation loop entered');
     let answerToArray = 0;
     for (problem of mathProblems) {
         if (problem.operatorName === 'Addition') {
         problem.answer = parseFloat(problem.valueOneName) + parseFloat(problem.valueTwoName);
         console.log('mathProblems array after the for loop:', mathProblems);
+
+        } else if (problem.operatorName === 'Subtraction') {
+        problem.answer = parseFloat(problem.valueOneName) - parseFloat(problem.valueTwoName);
+        console.log('mathProblems array after the for loop:', mathProblems);
+        
+        } else if (problem.operatorName === 'Multiplication') {
+            problem.answer = parseFloat(problem.valueOneName) * parseFloat(problem.valueTwoName);
+            console.log('mathProblems array after the for loop:', mathProblems);
+        
+        } else if (problem.operatorName === 'Division') {
+            problem.answer = parseFloat(problem.valueOneName) / parseFloat(problem.valueTwoName);
+            console.log('mathProblems array after the for loop:', mathProblems);
         }
     }
-}
+    res.sendStatus(200);
+});
 
 
 

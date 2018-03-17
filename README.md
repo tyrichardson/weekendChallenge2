@@ -25,7 +25,7 @@ Each of the numerical values and type of mathematical operation will be bundled 
 
 Once the server receives it, build out logic to compute the numbers in 1 of 4 different ways. The server should be able to handle Addition, Subtraction, Multiplication, and Division.
 
-- [ ] Create a switch or if_else loop on the server to push the calculated answer to the array (adding a property to the object) and return the array to the client
+- [x] Create an if_else loop on the server to push the calculated answer to the array (adding a property to the object) and return the array to the client
 
     - [x] Get addition to work as first thing
 
@@ -48,7 +48,7 @@ History:
 4 * 3 = 12
 3 + 6 = 9
 
-- [ ] Append array to DOM as full history of user input, calculation output
+- [x] Append array to DOM as full history of user input, calculation output
 
 
 HARD MODE:

@@ -2,8 +2,6 @@ console.log('js is loaded');
 
 $(document).ready(readyNow);
 
-//let clickedText = '';
-
 function readyNow() {
     console.log('jQuery is ready; entered readyNow function');
     $('#addButton').on('click', submitProblem);
@@ -23,19 +21,30 @@ function getProblemsArray(){
 }
 
 function appendToDom(mathProblems){
-    console.log('entered appendToDom function in client.js');
-    $('outputToDom').empty();
-    for (let problem of mathProblems){
-        console.log('problem:', problem );
+    console.log('GET sent; entered appendToDom function in client.js');
+    $('#outputCurrentToDom').empty();
+    $('#outputToDom').empty();
+ for (let problem of mathProblems){
+        console.log('at appendToDom for_loop problem of mathProblems, show problem:', problem );
         let tr = $('<tr></tr>');
         tr.append('<td>' + problem.valueOneName + '</td>');
         tr.append('<td>' + problem.operatorName + '</td>');
         tr.append('<td>' + problem.valueTwoName + '</td>');
         tr.append('<td>' + "=" + '</td>');
         tr.append('<td>' + problem.answer + '</td>');
-        $('#outputToDom').append(tr);
+        $('#outputCurrentToDom').empty();
+        $('#outputCurrentToDom').append(tr);   
     }
-
+    for (let problem2 of mathProblems) {
+        console.log('at appendToDom for_loop problem of mathProblems, show problem:', problem2);
+        let tr2 = $('<tr></tr>');
+        tr2.append('<td>' + problem2.valueOneName + '</td>');
+        tr2.append('<td>' + problem2.operatorName + '</td>');
+        tr2.append('<td>' + problem2.valueTwoName + '</td>');
+        tr2.append('<td>' + "=" + '</td>');
+        tr2.append('<td>' + problem2.answer + '</td>');
+        $('#outputToDom').append(tr2);
+    }
 }
 
 function submitProblem(){
