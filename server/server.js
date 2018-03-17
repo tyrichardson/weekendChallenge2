@@ -22,7 +22,21 @@ app.post('/problemsObject',(req, res) => {
     mathProblems.push(problemToAdd);
     console.log('mathProblems array:', mathProblems);
     res.sendStatus(200);
+    calculate();
 });
+
+function calculate(){
+    console.log('calculate function entered');
+    let answerToArray = 0;
+    for (problem of mathProblems) {
+        if (problem.operatorName === 'Addition') {
+        problem.answer = parseFloat(problem.valueOneName) + parseFloat(problem.valueTwoName);
+        console.log('mathProblems array after the for loop:', mathProblems);
+        }
+    }
+}
+
+
 
 //spin up the server
 app.listen(PORT, () => {

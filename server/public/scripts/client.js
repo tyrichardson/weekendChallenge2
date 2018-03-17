@@ -1,16 +1,12 @@
-console.log('js');
+console.log('js is loaded');
 
 $(document).ready(readyNow);
 
 //let clickedText = '';
 
 function readyNow() {
-    console.log('entered readyNow function');
+    console.log('jQuery is ready; entered readyNow function');
     $('#addButton').on('click', submitProblem);
-    //$('#addButton').on('click', function () {
-      //  console.log('clicked add button');
-       // clickedText = this.textContent;
-    //});
     $('#subtractButton').on('click', submitProblem);
     $('#multiplyButton').on('click', submitProblem);
     $('#divideButton').on('click', submitProblem);
@@ -36,7 +32,7 @@ function appendToDom(mathProblems){
         tr.append('<td>' + problem.operatorName + '</td>');
         tr.append('<td>' + problem.valueTwoName + '</td>');
         tr.append('<td>' + "=" + '</td>');
-        tr.append('<td>' + "answer" + '</td>');
+        tr.append('<td>' + problem.answer + '</td>');
         $('#outputToDom').append(tr);
     }
 

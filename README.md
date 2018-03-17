@@ -18,22 +18,26 @@ Each of the numerical values and type of mathematical operation will be bundled 
 
 - [x] Create listeners for each of the four buttons
 - [x] Create an object with the two user input values and the operator of the button clicked
+- [x] Create a GET for the answer data from the server (.done, etc...)
 - [x] POST the object to the server
-- [ ] Verify the response is received from the server
+- [x] Verify the response is received from the server
+- [x] Test appending user input to DOM
 
 Once the server receives it, build out logic to compute the numbers in 1 of 4 different ways. The server should be able to handle Addition, Subtraction, Multiplication, and Division.
 
-- [ ] Create a switch loop on the server to return the appropriate value to the client
+- [ ] Create a switch or if_else loop on the server to push the calculated answer to the array (adding a property to the object) and return the array to the client
+
+    - [x] Get addition to work as first thing
 
 Once the calculation is complete, it should be sent back down to the client side app where it should be displayed on the DOM.
 
-- [ ] Create a GET for the answer data from the server and append it to the DOM
+- [x] Append data to the DOM
 
 NOTE: You can send an object back as a response to a POST request or follow up the POST with a GET request to retrieve the data. Using a GET request to follow up is more common at Prime and will put you in a better position working on the History feature below.
 
 Finally, build a 'clear' button that resets the whole experience.
 
-- [ ] Create a button that resets the DOM to the default/initial state
+- [ ] Create a button that resets the DOM to the default/initial state (but keeps history in tact for the History display)
 
 History:
 Keep a historical record of all math operations on the server. Display a list of all previous calculations on the page when it loads. Update the list when a new calculation is made.
@@ -44,6 +48,7 @@ History:
 4 * 3 = 12
 3 + 6 = 9
 
+- [ ] Append array to DOM as full history of user input, calculation output
 
 
 HARD MODE:
