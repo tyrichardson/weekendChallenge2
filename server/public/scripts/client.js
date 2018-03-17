@@ -2,9 +2,15 @@ console.log('js');
 
 $(document).ready(readyNow);
 
+//let clickedText = '';
+
 function readyNow() {
     console.log('entered readyNow function');
     $('#addButton').on('click', submitProblem);
+    //$('#addButton').on('click', function () {
+      //  console.log('clicked add button');
+       // clickedText = this.textContent;
+    //});
     $('#subtractButton').on('click', submitProblem);
     $('#multiplyButton').on('click', submitProblem);
     $('#divideButton').on('click', submitProblem);
@@ -22,9 +28,32 @@ function getProblemsArray(){
 
 function appendToDom(mathProblems){
     console.log('entered appendToDom function in client.js');
+    $('#divOutput').empty();
+    for (let problem of mathProblems){
+        console.log('problem:', problem );
+        let tr = $('<tr></tr>');
+        tr.append('<td>' + problem.value1 + '</td>');
+        tr.append('<td>' + problem.operator + '</td>');
+        tr.append('<td>' + problem.value2 + '</td>');
+        $('#outputToDom').append(tr);
+    }
 
 }
 
 function submitProblem(){
     console.log('entered submitProblem function in client.js');
+    let operator = this.textContent;
+    let value1 = $('#value1').val();
+    let value2 = $('#value2').val();
+    let problemsObject = {valueOneName: value1, operatorName: operator, valueTwoName: value2};
+    $.ajax({
+        type: 'post',
+        data: problemsObject,
+        url: '/problemsObject'
+    }).done(function(response){
+        console.log('Successful response for post to server');
+        getProblemsArray();
+    }).fail(function(response){
+        alert('Something went horribly wrong.');
+    })
 }

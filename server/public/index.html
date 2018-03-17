@@ -10,31 +10,46 @@
     <title>Weekend Challenge #2</title>
 </head>
 <body>
+
     <div id="bodyDiv">
             <h1>Weekend Challange #2</h1>
 
         <div id="divInput">
 
             <input type="text" id="value1" placeholder="type a number">
-
-            <button type="submit" id="addButton">plus</button>
-            <button type="submit" id="subtractButton">minus</button>
-            <button type="submit" id="multiplyButton">times</button>
-            <button type="submit" id="divideButton">divided by</button>
-
             <input type="text" id="value2" placeholder="type a number">
 
-            </div>
+            <br>
+            <br>
+
+            <button type="submit" id="addButton">Addition</button>
+            <button type="submit" id="subtractButton">Subtraction</button>
+            <button type="submit" id="multiplyButton">Multiplication</button>
+            <button type="submit" id="divideButton">Division</button>
+
+
+
+         </div>
 
             <br>
             <br>
 
         <div id="divOutput">
-            
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Value</th>
+                        <th>Operator</th>
+                        <th>Second Value</th>
+                        <th>=</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="outputToDom"></tbody>
+            </table>
         </div>
-
-        
         
     </div>
+
 </body>
 </html>

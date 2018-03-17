@@ -9,9 +9,9 @@ h1 {
 }
 
 #divInput {
-    text-align-last: center;
+    text-align: center;
 }
 
 #divOutput {
-    text-align-last: center;
+    align-items: center;
 }

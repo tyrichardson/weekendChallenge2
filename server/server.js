@@ -16,11 +16,13 @@ app.get('/getProblems', (req, res) => {
     res.send(mathProblems);
 });
 
-
-
-
-
-
+app.post('/problemsObject',(req, res) => {
+    console.log('req.body:', req.body);
+    let problemToAdd = req.body;
+    mathProblems.push(problemToAdd);
+    console.log('mathProblems array:', mathProblems);
+    res.sendStatus(200);
+});
 
 //spin up the server
 app.listen(PORT, () => {
