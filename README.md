@@ -37,7 +37,7 @@ NOTE: You can send an object back as a response to a POST request or follow up t
 
 Finally, build a 'clear' button that resets the whole experience.
 
-- [ ] Create a button that resets the DOM to the default/initial state (but keeps history in tact for the History display)
+- [x] Create a button that resets the DOM to the default/initial state (but keeps history in tact for the History display)
 
 History:
 Keep a historical record of all math operations on the server. Display a list of all previous calculations on the page when it loads. Update the list when a new calculation is made.

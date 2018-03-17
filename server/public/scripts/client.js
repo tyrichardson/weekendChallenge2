@@ -8,6 +8,7 @@ function readyNow() {
     $('#subtractButton').on('click', submitProblem);
     $('#multiplyButton').on('click', submitProblem);
     $('#divideButton').on('click', submitProblem);
+    $('#divInput').on('click', '#clearButton', clearFunc);
     getProblemsArray();
 }
 
@@ -25,7 +26,7 @@ function appendToDom(mathProblems){
     $('#outputCurrentToDom').empty();
     $('#outputToDom').empty();
  for (let problem of mathProblems){
-        console.log('at appendToDom for_loop problem of mathProblems, show problem:', problem );
+        console.log('at outputCurrentToDo for_loop problem of mathProblems, show problem:', problem );
         let tr = $('<tr></tr>');
         tr.append('<td>' + problem.valueOneName + '</td>');
         tr.append('<td>' + problem.operatorName + '</td>');
@@ -45,6 +46,16 @@ function appendToDom(mathProblems){
         tr2.append('<td>' + problem2.answer + '</td>');
         $('#outputToDom').append(tr2);
     }
+}
+
+function clearFunc(){
+    console.log('clearButton clicked; entered clearFunc');
+    $('#value1').val('');
+    $('#value2').val('');
+    $('#outputCurrentToDom').empty();
+    // $('#divInput').contents().filter(function () {
+    //     return (this.nodeType == 1);
+    // }).empty().val();
 }
 
 function submitProblem(){
