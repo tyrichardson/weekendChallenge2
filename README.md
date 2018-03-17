@@ -16,9 +16,9 @@ Each of the numerical values and type of mathematical operation will be bundled 
    type: "Add"
 }
 
-- [ ] Create listeners for each of the four buttons
-- [ ] Create an object with the two user input values and the operator of the button clicked
-- [ ] POST the object to the server
+- [x] Create listeners for each of the four buttons
+- [x] Create an object with the two user input values and the operator of the button clicked
+- [x] POST the object to the server
 - [ ] Verify the response is received from the server
 
 Once the server receives it, build out logic to compute the numbers in 1 of 4 different ways. The server should be able to handle Addition, Subtraction, Multiplication, and Division.

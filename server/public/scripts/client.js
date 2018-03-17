@@ -28,13 +28,15 @@ function getProblemsArray(){
 
 function appendToDom(mathProblems){
     console.log('entered appendToDom function in client.js');
-    $('#divOutput').empty();
+    $('outputToDom').empty();
     for (let problem of mathProblems){
         console.log('problem:', problem );
         let tr = $('<tr></tr>');
-        tr.append('<td>' + problem.value1 + '</td>');
-        tr.append('<td>' + problem.operator + '</td>');
-        tr.append('<td>' + problem.value2 + '</td>');
+        tr.append('<td>' + problem.valueOneName + '</td>');
+        tr.append('<td>' + problem.operatorName + '</td>');
+        tr.append('<td>' + problem.valueTwoName + '</td>');
+        tr.append('<td>' + "=" + '</td>');
+        tr.append('<td>' + "answer" + '</td>');
         $('#outputToDom').append(tr);
     }
 
